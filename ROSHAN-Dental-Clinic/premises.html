@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premises - ROSHAN Dental Clinic</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <div class="header-left-logo">
+      <img src="images/logo.jpeg" alt="Clinic Logo">
+    </div>
+    <nav class="header-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="premises.html">Premises</a>
+      <a href="faq.html">FAQ</a>
+      <a href="appointment.html">Appointment</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+<section class="page-hero">
+  <div class="page-hero-title">
+    <h1>Our Clinic Premises</h1>
+  </div>
+</section>
+
+<section class="premises-intro">
+  <p>Roshan Dental Clinic is designed with patient comfort, safety, and hygiene in mind. 
+Our premises include a clean and welcoming waiting area, well-equipped treatment room, 
+and modern dental equipment to provide efficient and comfortable dental care for every patient.
+</p>
+</section>
+
+<section class="premises-gallery">
+  <div class="premise-card">
+    <img src="images/premise1.jpeg" alt="Premise 1">
+  </div>
+  <div class="premise-card">
+    <img src="images/premise2.jpeg" alt="Premise 2">
+  </div>
+  <div class="premise-card">
+    <img src="images/premise3.jpeg" alt="Premise 3">
+  </div>
+  <div class="premise-card">
+    <img src="images/premise4.jpeg" alt="Premise 4">
+  </div>
+</section>
+<script>
+
+const images=document.querySelectorAll(".premise-card img");
+
+images.forEach(img=>{
+img.addEventListener("click",function(){
+
+let popup=document.createElement("div");
+
+popup.style.position="fixed";
+popup.style.top="0";
+popup.style.left="0";
+popup.style.width="100%";
+popup.style.height="100%";
+popup.style.background="rgba(0,0,0,0.8)";
+popup.style.display="flex";
+popup.style.justifyContent="center";
+popup.style.alignItems="center";
+popup.style.zIndex="2000";
+
+let big=document.createElement("img");
+big.src=this.src;
+big.style.maxWidth="90%";
+big.style.maxHeight="90%";
+big.style.borderRadius="10px";
+
+popup.appendChild(big);
+
+popup.onclick=function(){
+popup.remove();
+};
+
+document.body.appendChild(popup);
+
+});
+});
+
+</script>
+
+<footer>
+  <p>© 2026 ROSHAN Dental Clinic</p>
+</footer>
+
+</body>
+</html>

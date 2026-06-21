@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Request for Appointment - ROSHAN Dental Clinic</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <div class="header-left-logo">
+      <img src="images/logo.jpeg" alt="Clinic Logo">
+    </div>
+    <nav class="header-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="premises.html">Premises</a>
+      <a href="faq.html">FAQ</a>
+      <a href="appointment.html">Appointment</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+<h1>Request for an Appointment</h1>
+</section>
+
+<section class="appointment-section">
+
+<form id="appointmentForm">
+
+<input type="text" id="name" placeholder="Your Name" required>
+
+<input type="tel" id="phone" pattern="[0-9]{10}" placeholder="Phone Number" required>
+
+<input type="date" id="date" min="2026-03-24" required>
+
+<select id="time">
+<option value="">Preferred Time</option>
+<option>11:00 AM – 12:00 PM</option>
+<option>12:00 PM – 1:00 PM</option>
+<option>1:00 PM – 2:00 PM</option>
+<option>6:00 PM – 7:00 PM</option>
+<option>7:00 PM – 8:00 PM</option>
+<option>8:00 PM – 9:00 PM</option>
+</select>
+
+<textarea id="problem" placeholder="Describe your dental concern (optional)"></textarea>
+
+<button type="button" onclick="sendToWhatsApp()">Request Appointment</button>
+
+</form>
+
+<p class="appointment-note">
+You will be redirected to WhatsApp to send a <b>request for appointment</b>.
+Your appointment will be confirmed by the clinic based on availability.
+</p>
+
+<p class="clinic-timing">
+Clinic Timings: <b>11:00 AM – 2:00 PM</b> and <b>6:00 PM – 9:00 PM</b>
+</p>
+<div id="successPopup" class="popup">
+  <div class="popup-content">
+    <p>✅ Request Sent Successfully!</p>
+    <button onclick="closePopup()">OK</button>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>© 2026 ROSHAN Dental Clinic</p>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
